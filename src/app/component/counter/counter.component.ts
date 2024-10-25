@@ -9,6 +9,7 @@ import {
   increment,
   reset,
 } from '../../state/counter/counter.action';
+import { ProductService } from '../../shared/services/product.service';
 
 @Component({
   selector: 'app-counter',
@@ -20,7 +21,7 @@ import {
 export class CounterComponent {
   count: Observable<number>;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>, private product: ProductService) {
     this.count = this.store.select(selectCount);
   }
 

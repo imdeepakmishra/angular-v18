@@ -1,0 +1,11 @@
+<div class="container row">
+  <div class="col-3" *ngFor="let product of products$ | async">
+    <div class="card" style="width: 15rem">
+      <img src="{{ product.image }}" class="card-img-top" alt="" />
+      <div class="card-body">
+        <h3 class="card-title">{{ product.title }}</h3>
+        <p class="card-text">{{ product.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
