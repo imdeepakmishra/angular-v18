@@ -6,11 +6,12 @@ import { AppState } from './state/app.state';
 import { Store } from '@ngrx/store';
 import { selectCount } from './state/counter/counter.selector';
 import { AsyncPipe } from '@angular/common';
+import { ProductsComponent } from './component/products/products.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AsyncPipe, CounterComponent],
+  imports: [RouterOutlet, AsyncPipe, CounterComponent, ProductsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
